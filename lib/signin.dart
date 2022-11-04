@@ -1,35 +1,5 @@
-import 'package:flutter/material.dart'
-    show
-        BorderRadius,
-        BuildContext,
-        ButtonStyle,
-        ClipRRect,
-        Color,
-        Colors,
-        Column,
-        EdgeInsets,
-        ElevatedButton,
-        FontWeight,
-        Icon,
-        Icons,
-        Image,
-        MainAxisAlignment,
-        MaterialPageRoute,
-        MaterialStateProperty,
-        MediaQuery,
-        Navigator,
-        Padding,
-        Row,
-        Scaffold,
-        SizedBox,
-        StatelessWidget,
-        Text,
-        TextButton,
-        TextDecoration,
-        TextStyle,
-        Widget;
+import 'package:flutter/material.dart';
 import 'package:flutter_application_1/sign/email.dart';
-import 'package:flutter_application_1/sign/phone.dart';
 
 class Sign extends StatelessWidget {
   @override
@@ -84,8 +54,8 @@ class Sign extends StatelessWidget {
                 style: TextStyle(color: Colors.black),
               ),
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Email()));
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Email()));
               },
               icon: Icon(
                 Icons.email,
@@ -106,10 +76,7 @@ class Sign extends StatelessWidget {
                   'Phone',
                   style: TextStyle(color: Colors.black),
                 ),
-                onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => Phone()));
-                },
+                onPressed: () {},
                 icon: Icon(
                   Icons.phone_android,
                   color: Colors.black,

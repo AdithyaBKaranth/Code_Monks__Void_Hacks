@@ -59,11 +59,7 @@ class Email extends StatelessWidget {
             ),
           ),
           SizedBox(
-<<<<<<< HEAD
-            height: MediaQuery.of(context).size.height / 40,
-=======
             height: MediaQuery.of(context).size.height / 35,
->>>>>>> e225736dd463d8c4ba485ae0675f10f3e9cfd791
           ),
           SizedBox(
             width: MediaQuery.of(context).size.height / 3,
