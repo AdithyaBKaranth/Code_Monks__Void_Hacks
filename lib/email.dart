@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/forgotpass.dart';
 
 class Email extends StatelessWidget {
   @override
@@ -71,7 +72,10 @@ class Email extends StatelessWidget {
             height: MediaQuery.of(context).size.height / 50,
           ),
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Forgotpass()));
+              },
               child: Text(
                 'Forgot password?',
                 style: TextStyle(fontSize: 15),
