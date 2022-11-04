@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/sign/email.dart';
 import 'package:flutter_application_1/sign/phone.dart';
+import 'package:flutter_application_1/sign/signup.dart';
 
 class Sign extends StatelessWidget {
   @override
@@ -122,7 +123,10 @@ class Sign extends StatelessWidget {
             ),
             Text(' '),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Signup()));
+                },
                 child: Text(
                   'Sign up',
                   style: TextStyle(
