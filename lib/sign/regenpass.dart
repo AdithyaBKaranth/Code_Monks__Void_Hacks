@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/sign/forgotpass.dart';
+import 'package:flutter_application_1/splash/resetSplash.dart';
 
 class Regenpass extends StatelessWidget {
   @override
@@ -73,17 +74,8 @@ class Regenpass extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 50,
+            height: MediaQuery.of(context).size.height / 20,
           ),
-          TextButton(
-              onPressed: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => Forgotpass()));
-              },
-              child: Text(
-                'Forgot password?',
-                style: TextStyle(fontSize: 15),
-              )),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -94,8 +86,8 @@ class Regenpass extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
-                      //  Navigator.of(context).pushReplacement(
-                      //  MaterialPageRoute(builder: (context) => ()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => ResetSplash()));
                     },
                     child: Text("Next ->")),
               ),

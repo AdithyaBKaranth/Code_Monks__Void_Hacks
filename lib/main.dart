@@ -9,7 +9,6 @@ class Waste extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
-      theme: ThemeData.light(),
       home: Home(),
     );
   }
