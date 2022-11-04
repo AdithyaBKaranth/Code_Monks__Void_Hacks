@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/sign/regenpass.dart';
 
-class Forgotpass extends StatelessWidget {
+import 'package:flutter_application_1/sign/forgotpass.dart';
+
+class Regenpass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,43 +27,42 @@ class Forgotpass extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height / 20,
           ),
-          Column(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
-                    child: Text(
-                      'Login',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.deepOrange),
-                    ),
-                  ),
-                ],
-              ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+                padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Enter the OTP sent to your email id',
+                  'Login',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white),
+                      color: Colors.deepOrange),
                 ),
               ),
             ],
           ),
           SizedBox(
+            height: MediaQuery.of(context).size.height / 40,
+          ),
+          SizedBox(
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
-              maxLength: 6,
-              keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: 'OTP',
-                hintText: 'OTP',
+                hintText: 'New Password',
+                labelText: 'New Password',
+                hintStyle: TextStyle(color: Colors.grey),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white)),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.height / 3,
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: 'Confirm Password',
+                hintText: 'Confirm Password',
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -72,6 +72,15 @@ class Forgotpass extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height / 50,
           ),
+          TextButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Forgotpass()));
+              },
+              child: Text(
+                'Forgot password?',
+                style: TextStyle(fontSize: 15),
+              )),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -82,8 +91,8 @@ class Forgotpass extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (context) => Regenpass()));
+                      //  Navigator.of(context).pushReplacement(
+                      //  MaterialPageRoute(builder: (context) => ()));
                     },
                     child: Text("Next ->")),
               ),
