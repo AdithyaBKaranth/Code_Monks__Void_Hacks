@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/email.dart';
+import 'package:flutter_application_1/sign/email.dart';
+import 'package:flutter_application_1/sign/phone.dart';
 
 class Sign extends StatelessWidget {
   @override
@@ -54,8 +55,8 @@ class Sign extends StatelessWidget {
                 style: TextStyle(color: Colors.black),
               ),
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => Email()));
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Email()));
               },
               icon: Icon(
                 Icons.email,
@@ -76,7 +77,10 @@ class Sign extends StatelessWidget {
                   'Phone',
                   style: TextStyle(color: Colors.black),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Phone()));
+                },
                 icon: Icon(
                   Icons.phone_android,
                   color: Colors.black,

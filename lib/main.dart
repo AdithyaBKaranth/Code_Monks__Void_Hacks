@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/signin.dart';
+import 'package:flutter_application_1/sign/emailOtp.dart';
+import 'package:flutter_application_1/sign/signin.dart';
 
 void main() => runApp(Waste());
 
@@ -8,7 +9,8 @@ class Waste extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
-      home: Home(),
+      themeMode: ThemeMode.dark,
+      home: EmailOTP(),
     );
   }
 }

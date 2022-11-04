@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/splash/otpsplash.dart';
 
-class Email extends StatelessWidget {
+class EmailOTP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,41 +42,29 @@ class Email extends StatelessWidget {
             ],
           ),
           SizedBox(
+            height: MediaQuery.of(context).size.height / 20,
+          ),
+          Text(
+            'Enter the otp that is sent to your email id',
+            style: TextStyle(fontSize: 18),
+          ),
+          SizedBox(
             height: MediaQuery.of(context).size.height / 40,
           ),
           SizedBox(
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
+              keyboardType: TextInputType.number,
+              maxLength: 6,
               decoration: InputDecoration(
-                hintText: 'Email',
-                labelText: 'Email',
+                hintText: 'Enter the otp',
+                labelText: 'OTP',
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
               ),
             ),
           ),
-          SizedBox(
-            width: MediaQuery.of(context).size.height / 3,
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: 'Password',
-                hintText: 'Password',
-                hintStyle: TextStyle(color: Colors.grey),
-                border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white)),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height / 50,
-          ),
-          TextButton(
-              onPressed: () {},
-              child: Text(
-                'Forgot password?',
-                style: TextStyle(fontSize: 15),
-              )),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -86,8 +75,8 @@ class Email extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
-                      //  Navigator.of(context).pushReplacement(
-                      //  MaterialPageRoute(builder: (context) => ()));
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => OtpSplash()));
                     },
                     child: Text("Next ->")),
               ),
