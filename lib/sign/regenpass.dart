@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/splash/googlesplash.dart';
 
 import 'package:flutter_application_1/sign/forgotpass.dart';
 
-class Email extends StatelessWidget {
+class Regenpass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,8 +49,8 @@ class Email extends StatelessWidget {
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Email',
-                labelText: 'Email',
+                hintText: 'New Password',
+                labelText: 'New Password',
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -59,19 +58,14 @@ class Email extends StatelessWidget {
             ),
           ),
           SizedBox(
-<<<<<<< HEAD
-            height: MediaQuery.of(context).size.height / 40,
-=======
             height: MediaQuery.of(context).size.height / 35,
->>>>>>> e225736dd463d8c4ba485ae0675f10f3e9cfd791
           ),
           SizedBox(
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
-              obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Password',
-                hintText: 'Password',
+                labelText: 'Confirm Password',
+                hintText: 'Confirm Password',
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -100,8 +94,8 @@ class Email extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => googleSplash()));
+                      //  Navigator.of(context).pushReplacement(
+                      //  MaterialPageRoute(builder: (context) => ()));
                     },
                     child: Text("Next ->")),
               ),

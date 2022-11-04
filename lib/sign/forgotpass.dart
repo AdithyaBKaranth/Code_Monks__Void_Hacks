@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/splash/googlesplash.dart';
+import 'package:flutter_application_1/sign/regenpass.dart';
 
-import 'package:flutter_application_1/sign/forgotpass.dart';
-
-class Email extends StatelessWidget {
+class Forgotpass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,50 +26,43 @@ class Email extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height / 20,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+          Column(
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.deepOrange),
+                    ),
+                  ),
+                ],
+              ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25),
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
                 child: Text(
-                  'Login',
+                  'Enter the OTP sent to your email id',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.deepOrange),
+                      color: Colors.white),
                 ),
               ),
             ],
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 40,
-          ),
-          SizedBox(
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
+              maxLength: 6,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                hintText: 'Email',
-                labelText: 'Email',
-                hintStyle: TextStyle(color: Colors.grey),
-                border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white)),
-              ),
-            ),
-          ),
-          SizedBox(
-<<<<<<< HEAD
-            height: MediaQuery.of(context).size.height / 40,
-=======
-            height: MediaQuery.of(context).size.height / 35,
->>>>>>> e225736dd463d8c4ba485ae0675f10f3e9cfd791
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.height / 3,
-            child: TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Password',
-                hintText: 'Password',
+                labelText: 'OTP',
+                hintText: 'OTP',
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -81,15 +72,6 @@ class Email extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height / 50,
           ),
-          TextButton(
-              onPressed: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => Forgotpass()));
-              },
-              child: Text(
-                'Forgot password?',
-                style: TextStyle(fontSize: 15),
-              )),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -100,8 +82,8 @@ class Email extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => googleSplash()));
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Regenpass()));
                     },
                     child: Text("Next ->")),
               ),

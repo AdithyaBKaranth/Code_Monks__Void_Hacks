@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:flutter_application_1/sign/emailOtp.dart';
+=======
+>>>>>>> e225736dd463d8c4ba485ae0675f10f3e9cfd791
 import 'package:flutter_application_1/sign/signin.dart';
 
 void main() => runApp(Waste());
@@ -10,7 +13,12 @@ class Waste extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
+<<<<<<< HEAD
       home: EmailOTP(),
+=======
+      theme: ThemeData.light(),
+      home: Home(),
+>>>>>>> e225736dd463d8c4ba485ae0675f10f3e9cfd791
     );
   }
 }

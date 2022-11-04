@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/sign/email.dart';
+<<<<<<< HEAD
 import 'package:flutter_application_1/sign/phone.dart';
+=======
+>>>>>>> e225736dd463d8c4ba485ae0675f10f3e9cfd791
 
 class Sign extends StatelessWidget {
   @override
