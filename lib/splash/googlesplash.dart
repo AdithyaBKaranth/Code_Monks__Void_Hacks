@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/mainer/mainHome.dart';
 
 class googleSplash extends StatefulWidget {
   @override
@@ -14,8 +15,8 @@ class _googleSplashState extends State<googleSplash> {
 
   void _navigateToDob() async {
     await Future.delayed(Duration(milliseconds: 2000));
-    // Navigator.of(context)
-    //  .pushReplacement(MaterialPageRoute(builder: (context) => Dob()));
+    Navigator.of(context)
+        .pushReplacement(MaterialPageRoute(builder: (context) => MainHome()));
   }
 
   @override

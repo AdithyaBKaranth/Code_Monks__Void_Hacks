@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/mainer/mainHome.dart';
 
-class OtpSplash extends StatefulWidget {
+class UpdateSplash extends StatefulWidget {
   @override
-  State<OtpSplash> createState() => _OtpSplashState();
+  State<UpdateSplash> createState() => UpdateSplashState();
 }
 
-class _OtpSplashState extends State<OtpSplash> {
+class UpdateSplashState extends State<UpdateSplash> {
   @override
   void initState() {
     _navigateToDob();
@@ -25,7 +25,7 @@ class _OtpSplashState extends State<OtpSplash> {
       backgroundColor: Color.fromARGB(55, 0, 0, 200),
       body: Center(
         child: Text(
-          'Verifying your phone number...',
+          'Updating your profile...',
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
