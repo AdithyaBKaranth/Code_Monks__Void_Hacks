@@ -132,7 +132,7 @@ class Settings extends StatelessWidget {
             tileColor: Colors.orange,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 15,
+            height: MediaQuery.of(context).size.height / 25,
           ),
           Text(
             'from',
