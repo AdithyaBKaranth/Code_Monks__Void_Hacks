@@ -153,12 +153,9 @@ class Settings extends StatelessWidget {
                     'assets/images/dumpy.png',
                     scale: 20,
                   )),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Dumpy',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
+              Text(
+                'Dumpy',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               )
             ],
           )
