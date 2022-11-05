@@ -18,8 +18,8 @@ class Change extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: ((context) => Phcgotp())));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: ((context) => Emailcgotp())));
             },
             child: ListTile(
               shape: RoundedRectangleBorder(
@@ -43,8 +43,8 @@ class Change extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: ((context) => Emailcgotp())));
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: ((context) => Phcgotp())));
             },
             child: ListTile(
               shape: RoundedRectangleBorder(

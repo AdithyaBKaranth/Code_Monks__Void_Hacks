@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/sign/newemail.dart';
 import 'package:flutter_application_1/sign/newph.dart';
 
 class Emailcgotp extends StatelessWidget {
@@ -69,7 +70,7 @@ class Emailcgotp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => Newph()));
+                          MaterialPageRoute(builder: (context) => Newemail()));
                     },
                     child: Text("Next ->")),
               ),

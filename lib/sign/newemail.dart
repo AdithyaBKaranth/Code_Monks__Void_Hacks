@@ -32,7 +32,7 @@ class Newemail extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Change Phone Number',
+                  'Change Email',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
