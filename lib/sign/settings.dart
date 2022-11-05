@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/sign/change.dart';
 
 class Settings extends StatelessWidget {
   @override
@@ -14,26 +15,32 @@ class Settings extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height / 25,
           ),
-          ListTile(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-            leading: Icon(
-              Icons.key,
-              color: Colors.black,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: ((context) => Change())));
+            },
+            child: ListTile(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)),
+              leading: Icon(
+                Icons.key,
+                color: Colors.black,
+              ),
+              title: Text(
+                'Account',
+                style: TextStyle(
+                    color: Colors.blue[900],
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22),
+              ),
+              subtitle: Text(
+                'Privacy, security, change number',
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+              tileColor: Colors.orange,
             ),
-            title: Text(
-              'Account',
-              style: TextStyle(
-                  color: Colors.blue[900],
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22),
-            ),
-            subtitle: Text(
-              'Privacy, security, change number',
-              style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-            ),
-            tileColor: Colors.orange,
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height / 25,
