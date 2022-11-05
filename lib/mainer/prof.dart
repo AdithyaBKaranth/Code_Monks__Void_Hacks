@@ -7,7 +7,6 @@ class Prof extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         actions: [
           IconButton(
@@ -171,37 +170,6 @@ class Prof extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Phone',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Colors.deepOrange),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height / 40,
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.height / 3,
-            child: IntlPhoneField(
-              countries: ['IN'],
-              initialCountryCode: 'IN',
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.pink))),
-            ),
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height / 40,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25),
-                child: Text(
                   'Ward No',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -263,36 +231,6 @@ class Prof extends StatelessWidget {
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height / 40,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25),
-                child: Text(
-                  'Email',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Colors.deepOrange),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height / 40,
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.height / 3,
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: 'Email',
-                hintText: 'Email',
-                hintStyle: TextStyle(color: Colors.grey),
-                border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white)),
-              ),
-            ),
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height / 40,

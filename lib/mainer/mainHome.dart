@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/mainer/prof.dart';
+import 'package:flutter_application_1/sign/settings.dart';
 
 class MainHome extends StatefulWidget {
   @override
@@ -40,6 +41,9 @@ class _MainHomeState extends State<MainHome> {
                 if (value == 'Edit profile')
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) => Prof()));
+                if (value == 'Settings')
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Settings()));
               },
             )
           ],
